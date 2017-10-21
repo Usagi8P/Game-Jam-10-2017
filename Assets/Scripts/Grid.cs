@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour {
 
+    public GameObject tile;
+
     public LayerMask unwalkwableMask;
     public Vector2 gridWorldSize;
     public float nodeRadius;
@@ -34,6 +36,7 @@ public class Grid : MonoBehaviour {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
                 bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkwableMask));
                 grid[x, y] = new Node(walkable, new Vector2(worldPoint.x, worldPoint.y), walkable);
+                Instantiate(tile, worldPoint + Vector3.forward, new Quaternion(0f,0f,0f,0f));
             }
         }
     }

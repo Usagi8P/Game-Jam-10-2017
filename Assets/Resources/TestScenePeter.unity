@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633bda64bf0eb7f488d83a57dd33dd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 1814815662855154, guid: 31db872b1ae427c46b31c23637056bfd, type: 2}
   unwalkwableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -755,7 +756,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.44852942, g: 0.44852942, b: 0.44852942, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -844,6 +845,12 @@ Prefab:
       propertyPath: gridWorldSize.x
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 114293505325340930, guid: e0c1055409ea5964da7784dabb033cec,
+        type: 2}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1814815662855154, guid: 31db872b1ae427c46b31c23637056bfd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c1055409ea5964da7784dabb033cec, type: 2}
   m_IsPrefabParent: 0
