@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player1Controller : MonoBehaviour {
 
+    private Animator animator;
+
     //Grid variables
     public int xPos, yPos;
     public GameObject gridSystem;
@@ -17,7 +19,11 @@ public class Player1Controller : MonoBehaviour {
     public float timeBetweenNodes;
 
     private GameObject[] zombies;
+    private GameObject ghost;
 
+    public GameObject scoreSystemGameObject;
+    private ScoreSystem scoreSystem;
+    public float scoreSubtractionRate;
 
     //Used to lerp player to desired position
     private Vector3 StartingPostition;
@@ -25,6 +31,10 @@ public class Player1Controller : MonoBehaviour {
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
+
+        scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
+        ghost = GameObject.FindGameObjectWithTag("ghost");
 
         zombies = GameObject.FindGameObjectsWithTag("zombie");
 
@@ -42,10 +52,12 @@ public class Player1Controller : MonoBehaviour {
 
     private void Update()
     {
+        TouchingGhost();
         CastSpellOnZombie();
         //Get inputs
         if (Input.GetKey(KeyCode.A) && !waitingToMove && grid.NodeFromGridPosition(xPos - 1, yPos).walkable) { 
             xPos = Mathf.Clamp(xPos - 1, 0, gridSizeX-1);
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_4", typeof(RuntimeAnimatorController));
             StartCoroutine(WaitToMove());
             MoveToGridPoint(xPos, yPos);
         }
@@ -67,8 +79,17 @@ public class Player1Controller : MonoBehaviour {
         else if (Input.GetKey(KeyCode.D) && !waitingToMove && grid.NodeFromGridPosition(xPos+1, yPos).walkable)
         {
             xPos = Mathf.Clamp(xPos + 1, 0, gridSizeX-1);
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_0", typeof(RuntimeAnimatorController));
             StartCoroutine(WaitToMove());
             MoveToGridPoint(xPos, yPos);
+        }
+    }
+
+    private void TouchingGhost()
+    {
+        if (ghost.GetComponent<GhostController>().xPos == xPos && ghost.GetComponent<GhostController>().yPos == yPos)
+        {
+            StartCoroutine(SubtractScore());
         }
     }
 
@@ -78,11 +99,24 @@ public class Player1Controller : MonoBehaviour {
         {
             if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos)
             {
+                StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
                 grid.NodeFromGridPosition(xPos, yPos).zWalkable = false;
                 Debug.Log(grid.NodeFromGridPosition(xPos, yPos).zWalkable);
                 zom.GetComponent<ZombieController>().isDead = true;
             }
         }
+    }
+
+    IEnumerator CastAnimation(RuntimeAnimatorController previousAnimation)
+    {
+        animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_2", typeof(RuntimeAnimatorController));
+        yield return new WaitForSeconds(0.5f);
+        animator.runtimeAnimatorController = previousAnimation;
+    }
+    IEnumerator SubtractScore()
+    {
+        scoreSystem.SetP1Score(scoreSystem.GetP1Score() - 1);
+        yield return new WaitForSeconds(scoreSubtractionRate);
     }
 
     IEnumerator WaitToMove()

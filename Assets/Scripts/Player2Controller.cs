@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player2Controller : MonoBehaviour {
 
+    private Animator animator;
+
     //Grid variables
     public int xPos, yPos;
     public GameObject gridSystem;
@@ -24,6 +26,8 @@ public class Player2Controller : MonoBehaviour {
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
+
         zombies = GameObject.FindGameObjectsWithTag("zombie");
 
         grid = gridSystem.GetComponent<Grid>();
@@ -47,6 +51,7 @@ public class Player2Controller : MonoBehaviour {
         {
             xPos = Mathf.Clamp(xPos - 1, 0, gridSizeX - 1);
             StartCoroutine(WaitToMove());
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Necromancer/Necromancer_4", typeof(RuntimeAnimatorController));
             MoveToGridPoint(xPos, yPos);
         }
 
@@ -68,7 +73,9 @@ public class Player2Controller : MonoBehaviour {
         {
             xPos = Mathf.Clamp(xPos + 1, 0, gridSizeX - 1);
             StartCoroutine(WaitToMove());
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Necromancer/Necromancer_0", typeof(RuntimeAnimatorController));
             MoveToGridPoint(xPos, yPos);
+
         }
     }
 
@@ -76,13 +83,21 @@ public class Player2Controller : MonoBehaviour {
     {
         foreach (GameObject zom in zombies)
         {
-            if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos)
+            if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos && zom.GetComponent<ZombieController>().isDead == true)
             {
+                StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
                 grid.NodeFromGridPosition(xPos, yPos).zWalkable = true;
                 Debug.Log(grid.NodeFromGridPosition(xPos, yPos).zWalkable);
                 zom.GetComponent<ZombieController>().isDead = false;
             }
         }
+    }
+
+    IEnumerator CastAnimation(RuntimeAnimatorController previousAnimation)
+    {
+        animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Necromancer/Necromancer_2", typeof(RuntimeAnimatorController));
+        yield return new WaitForSeconds(0.5f);
+        animator.runtimeAnimatorController = previousAnimation;
     }
 
     IEnumerator WaitToMove()
