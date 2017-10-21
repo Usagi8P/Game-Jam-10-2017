@@ -99,7 +99,10 @@ public class Player1Controller : MonoBehaviour {
         {
             if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos && zom.GetComponent<ZombieController>().isDead == false)
             {
-                StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
+                if (animator.runtimeAnimatorController != (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_2", typeof(RuntimeAnimatorController)))
+                {
+                    StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
+                }
                 grid.NodeFromGridPosition(xPos, yPos).zWalkable = false;
                 Debug.Log(grid.NodeFromGridPosition(xPos, yPos).zWalkable);
                 zom.GetComponent<ZombieController>().isDead = true;

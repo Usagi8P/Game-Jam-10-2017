@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ZombieController : MonoBehaviour {
 
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    public Sprite deadSprite;
+    public Sprite aliveSprite;
+
     //Grid variables
     public int xPos, yPos;
     public GameObject gridSystem;
@@ -30,6 +35,8 @@ public class ZombieController : MonoBehaviour {
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
         grid = gridSystem.GetComponent<Grid>();
 
@@ -49,12 +56,23 @@ public class ZombieController : MonoBehaviour {
 
     private void Update()
     {
-        if (!isDead && !waitingToMove)
+        if (isDead)
         {
-            preRandomNumber = randomNumber;
-            randomNumber = Random.Range(0f, 1f);
-            Movement(randomNumber, preRandomNumber);
+            spriteRenderer.sprite = deadSprite;
+            animator.runtimeAnimatorController = null;
         }
+        else
+        {
+            spriteRenderer.sprite = aliveSprite;
+            if (!waitingToMove)
+            {
+                preRandomNumber = randomNumber;
+                randomNumber = Random.Range(0f, 1f);
+                Movement(randomNumber, preRandomNumber);
+            }
+            
+        }
+        
     }
     void Movement(float number, float previousNumber)
     {
@@ -64,6 +82,7 @@ public class ZombieController : MonoBehaviour {
 
                 xPos = Mathf.Clamp(xPos - 1, 1, gridSizeX - 1);
                 StartCoroutine(WaitToMove());
+                animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Zombie/Zombie_left up", typeof(RuntimeAnimatorController));
                 MoveToGridPoint(xPos, yPos);
 
         }
@@ -91,8 +110,8 @@ public class ZombieController : MonoBehaviour {
 
                 xPos = Mathf.Clamp(xPos + 1, 1, gridSizeX - 1);
                 StartCoroutine(WaitToMove());
+                animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Zombie/Zombie_right_up", typeof(RuntimeAnimatorController));
                 MoveToGridPoint(xPos, yPos);
-
         }
     }
 
