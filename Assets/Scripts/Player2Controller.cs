@@ -19,6 +19,11 @@ public class Player2Controller : MonoBehaviour {
     public float timeBetweenNodes;
 
     private GameObject[] zombies;
+    private GameObject ghost;
+
+    public GameObject scoreSystemGameObject;
+    private ScoreSystem scoreSystem;
+    public float scoreSubtractionRate;
 
     //Used to lerp player to desired position
     private Vector3 StartingPostition;
@@ -29,6 +34,9 @@ public class Player2Controller : MonoBehaviour {
         animator = GetComponentInChildren<Animator>();
 
         zombies = GameObject.FindGameObjectsWithTag("zombie");
+
+        scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
+        ghost = GameObject.FindGameObjectWithTag("ghost");
 
         grid = gridSystem.GetComponent<Grid>();
 
@@ -44,7 +52,7 @@ public class Player2Controller : MonoBehaviour {
 
     private void Update()
     {
-
+        TouchingGhost();
         KillZombie();
         //Get inputs
         if (Input.GetKey("left") && !waitingToMove && grid.NodeFromGridPosition(xPos - 1, yPos).walkable)
@@ -75,7 +83,13 @@ public class Player2Controller : MonoBehaviour {
             StartCoroutine(WaitToMove());
             animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Necromancer/Necromancer_0", typeof(RuntimeAnimatorController));
             MoveToGridPoint(xPos, yPos);
-
+        }
+    }
+    private void TouchingGhost()
+    {
+        if (ghost.GetComponent<GhostController>().xPos == xPos && ghost.GetComponent<GhostController>().yPos == yPos)
+        {
+            StartCoroutine(SubtractScore());
         }
     }
 
@@ -92,7 +106,11 @@ public class Player2Controller : MonoBehaviour {
             }
         }
     }
-
+    IEnumerator SubtractScore()
+    {
+        scoreSystem.SetP2Score(scoreSystem.GetP2Score() - 1);
+        yield return new WaitForSeconds(scoreSubtractionRate);
+    }
     IEnumerator CastAnimation(RuntimeAnimatorController previousAnimation)
     {
         animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Necromancer/Necromancer_2", typeof(RuntimeAnimatorController));

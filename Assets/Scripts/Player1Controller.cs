@@ -57,8 +57,8 @@ public class Player1Controller : MonoBehaviour {
         //Get inputs
         if (Input.GetKey(KeyCode.A) && !waitingToMove && grid.NodeFromGridPosition(xPos - 1, yPos).walkable) { 
             xPos = Mathf.Clamp(xPos - 1, 0, gridSizeX-1);
-            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_4", typeof(RuntimeAnimatorController));
             StartCoroutine(WaitToMove());
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_4", typeof(RuntimeAnimatorController));
             MoveToGridPoint(xPos, yPos);
         }
 
@@ -79,8 +79,8 @@ public class Player1Controller : MonoBehaviour {
         else if (Input.GetKey(KeyCode.D) && !waitingToMove && grid.NodeFromGridPosition(xPos+1, yPos).walkable)
         {
             xPos = Mathf.Clamp(xPos + 1, 0, gridSizeX-1);
-            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_0", typeof(RuntimeAnimatorController));
             StartCoroutine(WaitToMove());
+            animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_0", typeof(RuntimeAnimatorController));
             MoveToGridPoint(xPos, yPos);
         }
     }
@@ -97,7 +97,7 @@ public class Player1Controller : MonoBehaviour {
     {
         foreach (GameObject zom in zombies)
         {
-            if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos)
+            if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos && zom.GetComponent<ZombieController>().isDead == false)
             {
                 StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
                 grid.NodeFromGridPosition(xPos, yPos).zWalkable = false;
@@ -110,7 +110,7 @@ public class Player1Controller : MonoBehaviour {
     IEnumerator CastAnimation(RuntimeAnimatorController previousAnimation)
     {
         animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_2", typeof(RuntimeAnimatorController));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         animator.runtimeAnimatorController = previousAnimation;
     }
     IEnumerator SubtractScore()
