@@ -12,8 +12,8 @@ public class ScoreSystem : MonoBehaviour {
 
     private void Update()
     {
-        score1.text = "Player 1 : " + p1Score.ToString();
-        score2.text = "Player 2 : " + p2Score.ToString();
+        score1.text = "HUNTER : " + p1Score.ToString();
+        score2.text = "NECROMANCER : " + p2Score.ToString();
 
 
     }

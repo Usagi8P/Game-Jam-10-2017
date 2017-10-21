@@ -5,6 +5,7 @@ using UnityEngine;
 public class Grid : MonoBehaviour {
 
     public GameObject tile;
+    public GameObject wall;
 
     public LayerMask unwalkwableMask;
     public Vector2 gridWorldSize;
@@ -36,7 +37,15 @@ public class Grid : MonoBehaviour {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
                 bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkwableMask));
                 grid[x, y] = new Node(walkable, new Vector2(worldPoint.x, worldPoint.y), walkable);
-                Instantiate(tile, worldPoint + Vector3.forward, new Quaternion(0f,0f,0f,0f));
+                if (walkable)
+                {
+                    Instantiate(tile, worldPoint + Vector3.forward, new Quaternion(0f, 0f, 0f, 0f));
+                }
+                else
+                {
+                    Instantiate(wall, worldPoint + Vector3.forward, new Quaternion(0f, 0f, 0f, 0f));
+                }
+                
             }
         }
     }
@@ -66,6 +75,7 @@ public class Grid : MonoBehaviour {
         return grid[x, y];
     }
     //Testing
+    /*
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, gridWorldSize.y,1));
@@ -79,4 +89,5 @@ public class Grid : MonoBehaviour {
             }
         }
     }
+    */
 }

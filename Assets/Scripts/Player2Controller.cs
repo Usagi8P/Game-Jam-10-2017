@@ -99,7 +99,11 @@ public class Player2Controller : MonoBehaviour {
         {
             if (zom.GetComponent<ZombieController>().xPos == xPos && zom.GetComponent<ZombieController>().yPos == yPos && zom.GetComponent<ZombieController>().isDead == true)
             {
-                StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
+                if (animator.runtimeAnimatorController != (RuntimeAnimatorController)Resources.Load("Necromancer/Necromancer_2", typeof(RuntimeAnimatorController)))//If animation is the praising the lord animation
+                {
+                    StartCoroutine(CastAnimation(animator.runtimeAnimatorController));
+                }
+                
                 grid.NodeFromGridPosition(xPos, yPos).zWalkable = true;
                 Debug.Log(grid.NodeFromGridPosition(xPos, yPos).zWalkable);
                 zom.GetComponent<ZombieController>().isDead = false;

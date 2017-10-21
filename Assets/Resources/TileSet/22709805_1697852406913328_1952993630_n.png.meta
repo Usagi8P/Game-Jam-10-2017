@@ -1,41 +1,41 @@
 fileFormatVersion: 2
-guid: 9a277da753a576c479f5fc6522cd2610
-timeCreated: 1508611704
+guid: 94834cd65564b8048abb197eec09b219
+timeCreated: 1508623503
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Tileset_0
-    21300002: Tileset_1
-    21300004: Tileset_2
-    21300006: Tileset_3
-    21300008: Tileset_4
-    21300010: Tileset_5
-    21300012: Tileset_6
-    21300014: Tileset_7
-    21300016: Tileset_8
-    21300018: Tileset_9
-    21300020: Tileset_10
-    21300022: Tileset_11
-    21300024: Tileset_12
-    21300026: Tileset_13
-    21300028: Tileset_14
-    21300030: Tileset_15
-    21300032: Tileset_16
-    21300034: Tileset_17
-    21300036: Tileset_18
-    21300038: Tileset_19
-    21300040: Tileset_20
-    21300042: Tileset_21
-    21300044: Tileset_22
-    21300046: Tileset_23
-    21300048: Tileset_24
-    21300050: Tileset_25
-    21300052: Tileset_26
-    21300054: Tileset_27
-    21300056: Tileset_28
-    21300058: Tileset_29
-    21300060: Tileset_30
-    21300062: Tileset_31
+    21300000: 22709805_1697852406913328_1952993630_n_0
+    21300002: 22709805_1697852406913328_1952993630_n_1
+    21300004: 22709805_1697852406913328_1952993630_n_2
+    21300006: 22709805_1697852406913328_1952993630_n_3
+    21300008: 22709805_1697852406913328_1952993630_n_4
+    21300010: 22709805_1697852406913328_1952993630_n_5
+    21300012: 22709805_1697852406913328_1952993630_n_6
+    21300014: 22709805_1697852406913328_1952993630_n_7
+    21300016: 22709805_1697852406913328_1952993630_n_8
+    21300018: 22709805_1697852406913328_1952993630_n_9
+    21300020: 22709805_1697852406913328_1952993630_n_10
+    21300022: 22709805_1697852406913328_1952993630_n_11
+    21300024: 22709805_1697852406913328_1952993630_n_12
+    21300026: 22709805_1697852406913328_1952993630_n_13
+    21300028: 22709805_1697852406913328_1952993630_n_14
+    21300030: 22709805_1697852406913328_1952993630_n_15
+    21300032: 22709805_1697852406913328_1952993630_n_16
+    21300034: 22709805_1697852406913328_1952993630_n_17
+    21300036: 22709805_1697852406913328_1952993630_n_18
+    21300038: 22709805_1697852406913328_1952993630_n_19
+    21300040: 22709805_1697852406913328_1952993630_n_20
+    21300042: 22709805_1697852406913328_1952993630_n_21
+    21300044: 22709805_1697852406913328_1952993630_n_22
+    21300046: 22709805_1697852406913328_1952993630_n_23
+    21300048: 22709805_1697852406913328_1952993630_n_24
+    21300050: 22709805_1697852406913328_1952993630_n_25
+    21300052: 22709805_1697852406913328_1952993630_n_26
+    21300054: 22709805_1697852406913328_1952993630_n_27
+    21300056: 22709805_1697852406913328_1952993630_n_28
+    21300058: 22709805_1697852406913328_1952993630_n_29
+    21300060: 22709805_1697852406913328_1952993630_n_30
+    21300062: 22709805_1697852406913328_1952993630_n_31
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -90,7 +90,7 @@ TextureImporter:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +98,7 @@ TextureImporter:
   - buildTarget: Standalone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +106,7 @@ TextureImporter:
   - buildTarget: iPhone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +114,7 @@ TextureImporter:
   - buildTarget: tvOS
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,7 +122,7 @@ TextureImporter:
   - buildTarget: Android
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +130,7 @@ TextureImporter:
   - buildTarget: Windows Store Apps
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,7 +138,7 @@ TextureImporter:
   - buildTarget: Samsung TV
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tileset_0
+      name: 22709805_1697852406913328_1952993630_n_0
       rect:
         serializedVersion: 2
         x: 0
@@ -161,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_1
+      name: 22709805_1697852406913328_1952993630_n_1
       rect:
         serializedVersion: 2
         x: 32
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_2
+      name: 22709805_1697852406913328_1952993630_n_2
       rect:
         serializedVersion: 2
         x: 64
@@ -189,7 +189,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_3
+      name: 22709805_1697852406913328_1952993630_n_3
       rect:
         serializedVersion: 2
         x: 96
@@ -203,7 +203,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_4
+      name: 22709805_1697852406913328_1952993630_n_4
       rect:
         serializedVersion: 2
         x: 128
@@ -217,7 +217,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_5
+      name: 22709805_1697852406913328_1952993630_n_5
       rect:
         serializedVersion: 2
         x: 160
@@ -231,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_6
+      name: 22709805_1697852406913328_1952993630_n_6
       rect:
         serializedVersion: 2
         x: 192
@@ -245,7 +245,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_7
+      name: 22709805_1697852406913328_1952993630_n_7
       rect:
         serializedVersion: 2
         x: 224
@@ -259,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_8
+      name: 22709805_1697852406913328_1952993630_n_8
       rect:
         serializedVersion: 2
         x: 0
@@ -273,7 +273,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_9
+      name: 22709805_1697852406913328_1952993630_n_9
       rect:
         serializedVersion: 2
         x: 32
@@ -287,7 +287,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_10
+      name: 22709805_1697852406913328_1952993630_n_10
       rect:
         serializedVersion: 2
         x: 64
@@ -301,7 +301,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_11
+      name: 22709805_1697852406913328_1952993630_n_11
       rect:
         serializedVersion: 2
         x: 96
@@ -315,7 +315,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_12
+      name: 22709805_1697852406913328_1952993630_n_12
       rect:
         serializedVersion: 2
         x: 128
@@ -329,7 +329,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_13
+      name: 22709805_1697852406913328_1952993630_n_13
       rect:
         serializedVersion: 2
         x: 160
@@ -343,7 +343,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_14
+      name: 22709805_1697852406913328_1952993630_n_14
       rect:
         serializedVersion: 2
         x: 192
@@ -357,7 +357,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_15
+      name: 22709805_1697852406913328_1952993630_n_15
       rect:
         serializedVersion: 2
         x: 224
@@ -371,7 +371,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_16
+      name: 22709805_1697852406913328_1952993630_n_16
       rect:
         serializedVersion: 2
         x: 0
@@ -385,7 +385,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_17
+      name: 22709805_1697852406913328_1952993630_n_17
       rect:
         serializedVersion: 2
         x: 32
@@ -399,7 +399,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_18
+      name: 22709805_1697852406913328_1952993630_n_18
       rect:
         serializedVersion: 2
         x: 64
@@ -413,7 +413,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_19
+      name: 22709805_1697852406913328_1952993630_n_19
       rect:
         serializedVersion: 2
         x: 96
@@ -427,7 +427,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_20
+      name: 22709805_1697852406913328_1952993630_n_20
       rect:
         serializedVersion: 2
         x: 128
@@ -441,7 +441,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_21
+      name: 22709805_1697852406913328_1952993630_n_21
       rect:
         serializedVersion: 2
         x: 160
@@ -455,7 +455,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_22
+      name: 22709805_1697852406913328_1952993630_n_22
       rect:
         serializedVersion: 2
         x: 192
@@ -469,7 +469,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_23
+      name: 22709805_1697852406913328_1952993630_n_23
       rect:
         serializedVersion: 2
         x: 224
@@ -483,7 +483,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_24
+      name: 22709805_1697852406913328_1952993630_n_24
       rect:
         serializedVersion: 2
         x: 0
@@ -497,7 +497,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_25
+      name: 22709805_1697852406913328_1952993630_n_25
       rect:
         serializedVersion: 2
         x: 32
@@ -511,7 +511,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_26
+      name: 22709805_1697852406913328_1952993630_n_26
       rect:
         serializedVersion: 2
         x: 64
@@ -525,7 +525,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_27
+      name: 22709805_1697852406913328_1952993630_n_27
       rect:
         serializedVersion: 2
         x: 96
@@ -539,7 +539,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_28
+      name: 22709805_1697852406913328_1952993630_n_28
       rect:
         serializedVersion: 2
         x: 128
@@ -553,7 +553,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_29
+      name: 22709805_1697852406913328_1952993630_n_29
       rect:
         serializedVersion: 2
         x: 160
@@ -567,7 +567,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_30
+      name: 22709805_1697852406913328_1952993630_n_30
       rect:
         serializedVersion: 2
         x: 192
@@ -581,7 +581,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Tileset_31
+      name: 22709805_1697852406913328_1952993630_n_31
       rect:
         serializedVersion: 2
         x: 224
