@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour {
 
     void Update ()
     {
-         sliderValue.text = slider.value.ToString("0.0");
+        sliderValue.text = "Seconds: " + slider.value.ToString("0");
+        PlayerPrefs.SetFloat("Stopwatch", slider.value);
     }
+    
 }
