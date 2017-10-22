@@ -15,6 +15,8 @@ public class ScoreSystem : MonoBehaviour {
         score1.text = "HUNTER : " + p1Score.ToString();
         score2.text = "NECROMANCER : " + p2Score.ToString();
 
+        PlayerPrefs.SetFloat("P1Score", p1Score);
+        PlayerPrefs.SetFloat("P2Score", p2Score);
 
     }
     public void SetP1Score(int _score)
