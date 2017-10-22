@@ -1117,7 +1117,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1307052981}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -43, z: 0}
+  m_LocalPosition: {x: 0.19999695, y: -43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 752408786}
@@ -1125,8 +1125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -43}
-  m_SizeDelta: {x: 251.3, y: 173}
+  m_AnchoredPosition: {x: 0.2, y: -43}
+  m_SizeDelta: {x: 237.8, y: 173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307052983
 MonoBehaviour:
@@ -1160,8 +1160,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Special ability:\n<<<Freeze>>>\nBlood is red, corpses are blue, if you
-    are a hunter I will freeze you.\n\nActivate with: \nE"
+  m_Text: 'Special ability:
+
+    <<<Haste>>>
+
+    He''s making a spell, he''s casting it twice, gonna make his minions very fast
+    - Necromancer is launching attack!
+
+
+    Activate with: E'
 --- !u!222 &1307052984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1553,7 +1560,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2140720505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -43, z: 0}
+  m_LocalPosition: {x: -0.9000015, y: -37.299995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1082104964}
@@ -1561,8 +1568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.000002, y: -43}
-  m_SizeDelta: {x: 251.3, y: 173}
+  m_AnchoredPosition: {x: -0.9, y: -37.3}
+  m_SizeDelta: {x: 235.5, y: 161.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140720507
 MonoBehaviour:
@@ -1596,8 +1603,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Special ability:\n<<<Chew gum>>>\nShe's here to chew gum and kick ass and
-    she actually has the gum.\n\nActivate with: \nRight Shift"
+  m_Text: "Special ability:\n<<<Freeze>>>\nBlood is red, corpses are blue, if you're
+    necromancer I will freeze you.\n\nActivate with: \nRight Shift"
 --- !u!222 &2140720508
 CanvasRenderer:
   m_ObjectHideFlags: 0
