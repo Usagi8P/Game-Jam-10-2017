@@ -1238,7 +1238,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1923632483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.800003, y: 16.599998, z: 0}
+  m_LocalPosition: {x: 0, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 621256482}
@@ -1246,8 +1246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.8, y: 16.6}
-  m_SizeDelta: {x: 503.4, y: 183.7}
+  m_AnchoredPosition: {x: 0, y: -12}
+  m_SizeDelta: {x: 503.4, y: 255.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923632485
 MonoBehaviour:
@@ -1272,7 +1272,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2f291214eb91df54d86edd2ad45bdb5b, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
@@ -1281,10 +1281,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<Story here>
-
-
-    And so they continue to compete in this endless...'
+  m_Text: "For betraying her people in chase of the glory the Goddess of Death sent
+    Huntress Hannah Hunter, a world-class zombie slayer to spend eternity in the Never-Ending
+    Catacombs.\r\n\nThis dark and cold place was created millennia ago by the Goddess
+    herself to punish the ignorant mortal who dared to master the forbidden arts of
+    resurrection. The prisoner known simply as the Necromancer wanders through the
+    catacombs able only to practice his obscene skills and nothing else.\r\n\nTwo
+    immortal souls trapped among graves. One able to kill, one to revive. Desperate
+    for emotions they continue to compete in this endless...\r\n"
 --- !u!222 &1923632486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1448,7 +1452,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057844962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: -112.05002, z: 0}
+  m_LocalPosition: {x: -8, y: -113, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 621256482}
@@ -1456,8 +1460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: -112.05002}
-  m_SizeDelta: {x: 535, y: 45}
+  m_AnchoredPosition: {x: -8, y: -113}
+  m_SizeDelta: {x: 535, y: 23.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057844964
 MonoBehaviour:
@@ -1482,7 +1486,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2f291214eb91df54d86edd2ad45bdb5b, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 2
