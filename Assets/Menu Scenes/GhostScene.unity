@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 286582655}
   - component: {fileID: 286582654}
   m_Layer: 5
-  m_Name: Text
+  m_Name: title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 363361947}
   - component: {fileID: 363361946}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: short bio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,7 +613,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e0bbc687ae811494790854e2a4b1edbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 775588511}
   - component: {fileID: 775588510}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: ghost_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 1063263806}
   - component: {fileID: 1063263805}
   m_Layer: 5
-  m_Name: characters_canvas
+  m_Name: ghost_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +790,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1063263804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 284.5, y: 160, z: 0}
+  m_LocalPosition: {x: 292.5, y: 164.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1920359243}
@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 1156541359}
   - component: {fileID: 1156541358}
   m_Layer: 5
-  m_Name: options_button
+  m_Name: next_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,8 +901,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e1336e0b2f03a5c4db786f0a94e37424, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 4fdea3b1746f3b54daa108944ea068d2, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 1920359245}
   - component: {fileID: 1920359244}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: back_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 2069430117}
   - component: {fileID: 2069430116}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: long bio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
