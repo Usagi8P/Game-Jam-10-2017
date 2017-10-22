@@ -6,8 +6,8 @@ public class escToMenu : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-            print("space key was pressed");
+        if (Input.GetKeyDown((KeyCode.Escape)))
+            LoadByIndex(0);
 
     }
 
@@ -18,9 +18,3 @@ public class escToMenu : MonoBehaviour
 }
 
 
-
-public class changeScene : MonoBehaviour
-{
-
-    
-}
