@@ -176,6 +176,12 @@ Prefab:
       propertyPath: isDead
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -247,6 +253,12 @@ Prefab:
       propertyPath: isDead
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -1728,6 +1740,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114878686743234744, guid: a528a0fec06539748816144fe5ba823a,
+        type: 2}
+      propertyPath: manaText
+      value: 
+      objectReference: {fileID: 1645542135}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a528a0fec06539748816144fe5ba823a, type: 2}
   m_IsPrefabParent: 0
@@ -1794,6 +1811,12 @@ Prefab:
       propertyPath: scoreSystemGameObject
       value: 
       objectReference: {fileID: 1550238668}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -1870,6 +1893,12 @@ Prefab:
       propertyPath: isDead
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -1929,7 +1958,7 @@ GameObject:
   - component: {fileID: 1645542136}
   - component: {fileID: 1645542135}
   m_Layer: 5
-  m_Name: Player1Mana (1)
+  m_Name: Player2Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2165,6 +2194,12 @@ Prefab:
       propertyPath: scoreSystemGameObject
       value: 
       objectReference: {fileID: 1550238668}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -2236,6 +2271,12 @@ Prefab:
       propertyPath: isDead
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -2381,6 +2422,12 @@ Prefab:
       propertyPath: scoreSystemGameObject
       value: 
       objectReference: {fileID: 1550238668}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
@@ -2614,6 +2661,12 @@ Prefab:
       propertyPath: scoreSystemGameObject
       value: 
       objectReference: {fileID: 1550238668}
+    - target: {fileID: 114582037509189598, guid: 8b6532a13267b8b478b6dca4d6027a55,
+        type: 2}
+      propertyPath: aliveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80b57ea27c8d2fb43858012dcf74146e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b6532a13267b8b478b6dca4d6027a55, type: 2}
   m_IsPrefabParent: 0
