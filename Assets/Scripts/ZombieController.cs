@@ -9,6 +9,8 @@ public class ZombieController : MonoBehaviour {
     public Sprite deadSprite;
     public Sprite aliveSprite;
 
+    private Color color;
+
     //Grid variables
     public int xPos, yPos;
     public GameObject gridSystem;
@@ -37,6 +39,7 @@ public class ZombieController : MonoBehaviour {
     {
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        color = spriteRenderer.color;
         scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
         grid = gridSystem.GetComponent<Grid>();
 
@@ -46,12 +49,27 @@ public class ZombieController : MonoBehaviour {
         desiredNode = grid.NodeFromGridPosition(xPos, yPos);
         transform.position = new Vector3(desiredNode.worldPosition.x, desiredNode.worldPosition.y, 0);
 
+        if (!grid.NodeFromGridPosition(xPos, yPos).walkable)
+        {
+            GoRandomLocation();
+        }
+
         //Set initial value of randomnumber to -1 so that the first run of Movement() will get a previous action number of -1
         randomNumber = -1f;
         StartCoroutine(AddScore());
     }
 
-
+    private void GoRandomLocation()
+    {
+        xPos = Mathf.RoundToInt(Random.Range(0, 19));
+        yPos = Mathf.RoundToInt(Random.Range(0, 11));
+        desiredNode = grid.NodeFromGridPosition(xPos, yPos);
+        transform.position = new Vector3(desiredNode.worldPosition.x, desiredNode.worldPosition.y, 0);
+        if (!grid.NodeFromGridPosition(xPos, yPos).walkable)
+        {
+            GoRandomLocation();
+        }
+    }
 
 
     private void Update()
@@ -113,6 +131,23 @@ public class ZombieController : MonoBehaviour {
                 animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Zombie/Zombie_right_up", typeof(RuntimeAnimatorController));
                 MoveToGridPoint(xPos, yPos);
         }
+    }
+    public void SpeedUpZomb()
+    {
+        
+        StartCoroutine(SpeedUp());
+    }
+    IEnumerator SpeedUp()
+    {
+        color.g = 0.5f;
+        color.b = 0.5f;
+        spriteRenderer.color = color;
+        slowness = slowness / 2;
+        yield return new WaitForSeconds(3);
+        color.b = 1f;
+        color.g = 1f;
+        spriteRenderer.color = color;
+        slowness = slowness * 2;
     }
 
     IEnumerator AddScore()

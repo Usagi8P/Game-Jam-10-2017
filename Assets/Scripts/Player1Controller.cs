@@ -1,10 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player1Controller : MonoBehaviour {
-
+    public int timeBetweenCasts;
     private Animator animator;
+    public Text manaText;
+    public GameObject manaCrystal;
+    private bool waitingToCast;
+
+    private int mana;
+
+    private Color color;
+    private SpriteRenderer spriteRenderer;
+
+    public GameObject player2;
 
     //Grid variables
     public int xPos, yPos;
@@ -31,6 +42,9 @@ public class Player1Controller : MonoBehaviour {
 
     void Start()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        color = spriteRenderer.color;
+
         animator = GetComponentInChildren<Animator>();
 
         scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
@@ -52,6 +66,8 @@ public class Player1Controller : MonoBehaviour {
 
     private void Update()
     {
+        manaText.text = "Mana : " + mana.ToString();
+        TouchingManaCrystal();
         TouchingGhost();
         CastSpellOnZombie();
         //Get inputs
@@ -83,13 +99,29 @@ public class Player1Controller : MonoBehaviour {
             animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Hunter/Hunter_0", typeof(RuntimeAnimatorController));
             MoveToGridPoint(xPos, yPos);
         }
-    }
+
+        if (Input.GetKey(KeyCode.E) && mana > 0 && !waitingToCast)
+        {
+            StartCoroutine(WaitToCast());
+            player2.GetComponent<Player2Controller>().MakeFrozen();
+            mana--;
+        }
+    }   
 
     private void TouchingGhost()
     {
         if (ghost.GetComponent<GhostController>().xPos == xPos && ghost.GetComponent<GhostController>().yPos == yPos)
         {
             StartCoroutine(SubtractScore());
+        }
+    }
+
+    private void TouchingManaCrystal()
+    {
+        if (manaCrystal.GetComponent<ManaCrystal>().xPos == xPos && manaCrystal.GetComponent<ManaCrystal>().yPos == yPos)
+        {
+            manaCrystal.GetComponent<ManaCrystal>().GoRandomLocation();
+            mana++;
         }
     }
 
@@ -108,6 +140,12 @@ public class Player1Controller : MonoBehaviour {
                 zom.GetComponent<ZombieController>().isDead = true;
             }
         }
+    }
+    IEnumerator WaitToCast()
+    {
+        waitingToCast = true;
+        yield return new WaitForSeconds(timeBetweenCasts);
+        waitingToCast = false;
     }
 
     IEnumerator CastAnimation(RuntimeAnimatorController previousAnimation)

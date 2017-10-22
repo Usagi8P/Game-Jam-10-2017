@@ -15,6 +15,7 @@ public class MakeTransparent : MonoBehaviour {
 		if (Physics.CheckSphere(transform.position + Vector3.forward, 0.5f, layerMask))
         {
             color.a = 0.5f;
+            
             GetComponent<SpriteRenderer>().color = color;
         }
         else

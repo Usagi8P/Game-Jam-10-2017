@@ -11,7 +11,7 @@ public class GhostController : MonoBehaviour {
     private int gridSizeX, gridSizeY;
 
     public GameObject scoreSystemGameObject;
-    private ScoreSystem scoreSystem;
+
 
 
 
@@ -28,7 +28,7 @@ public class GhostController : MonoBehaviour {
 
     void Start()
     {
-        scoreSystem = scoreSystemGameObject.GetComponent<ScoreSystem>();
+        
         grid = gridSystem.GetComponent<Grid>();
 
         gridSizeX = grid.GetGridSizeX();
@@ -56,7 +56,7 @@ public class GhostController : MonoBehaviour {
     void Movement(float number, float previousNumber)
     {
         //left
-        if (number < 0.25f && !waitingToMove && grid.NodeFromGridPosition(xPos - 1, yPos).walkable && grid.NodeFromGridPosition(xPos - 1, yPos).zWalkable)
+        if (number < 0.25f && !waitingToMove)
         {
 
             xPos = Mathf.Clamp(xPos - 1, 1, gridSizeX - 1);
@@ -65,7 +65,7 @@ public class GhostController : MonoBehaviour {
 
         }
         //up
-        if (number >= 0.25f && number < 0.5f && !waitingToMove && grid.NodeFromGridPosition(xPos, yPos + 1).walkable && grid.NodeFromGridPosition(xPos, yPos + 1).zWalkable)
+        if (number >= 0.25f && number < 0.5f && !waitingToMove)
         {
 
             yPos = Mathf.Clamp(yPos + 1, 1, gridSizeY - 1);
@@ -74,7 +74,7 @@ public class GhostController : MonoBehaviour {
 
         }
         //down
-        if (number >= 0.5f && number < 0.75f && !waitingToMove && grid.NodeFromGridPosition(xPos, yPos - 1).walkable && grid.NodeFromGridPosition(xPos, yPos - 1).zWalkable)
+        if (number >= 0.5f && number < 0.75f && !waitingToMove)
         {
 
             yPos = Mathf.Clamp(yPos - 1, 1, gridSizeY - 1);
@@ -83,7 +83,7 @@ public class GhostController : MonoBehaviour {
 
         }
         //right
-        if (number >= 0.75f && !waitingToMove && grid.NodeFromGridPosition(xPos + 1, yPos).walkable && grid.NodeFromGridPosition(xPos + 1, yPos).zWalkable)
+        if (number >= 0.75f && !waitingToMove)
         {
 
             xPos = Mathf.Clamp(xPos + 1, 1, gridSizeX - 1);
