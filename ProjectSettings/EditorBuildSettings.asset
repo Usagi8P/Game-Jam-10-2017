@@ -6,32 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Menu Scenes/AboutMenu.unity
-    guid: f9b62af1a33174148820fa295e77cd9b
-  - enabled: 1
-    path: Assets/Menu Scenes/ControlsScene.unity
-    guid: dd389cc114491c648a9206fd8cd89cb5
-  - enabled: 1
-    path: Assets/Menu Scenes/GhostScene.unity
-    guid: 931d4e4e4bfb4d749bbc0e6f9ded4ab0
-  - enabled: 1
-    path: Assets/Menu Scenes/HunterEnd.unity
-    guid: 10c86171e14787c41916d8b29bb2f6df
-  - enabled: 1
     path: Assets/Menu Scenes/MainMenu.unity
     guid: 3f56343f847a9d74a8907693cb99d070
   - enabled: 1
+    path: Assets/Menu Scenes/AboutMenu.unity
+    guid: 4d2833f669cb60e40997813cb4a5875a
+  - enabled: 1
+    path: Assets/Menu Scenes/ControlsScene.unity
+    guid: c37be252d52a4f745a92ef6c58fcae8d
+  - enabled: 1
+    path: Assets/Menu Scenes/GhostScene.unity
+    guid: d929e2e72d6ec784490b23dfc0295797
+  - enabled: 1
+    path: Assets/Menu Scenes/HunterEnd.unity
+    guid: 51e6c43e8d37402498cc1a5d91b3bd33
+  - enabled: 1
     path: Assets/Menu Scenes/NecroEnd.unity
-    guid: 0ffeea33a3896ed4d8eb7ef51831bf6a
+    guid: 157ae5ce9f2e1644da214abd39a7af17
   - enabled: 1
     path: Assets/Menu Scenes/OptionsMenu.unity
     guid: 7692aed2b713ab14a8ec740c3b9fa333
   - enabled: 1
     path: Assets/Menu Scenes/StoryScene.unity
-    guid: 293bd9c12213cbc44a01ffe402f4287f
+    guid: 77ea2cf6eb8209e4f881145196f09233
   - enabled: 1
     path: Assets/Menu Scenes/ZombieScene.unity
-    guid: 18e1e6ff149427747b93f69cee2291bb
+    guid: 5518e379d3efb7d46a7b0ae294a2ed64
   - enabled: 1
     path: Assets/Resources/TestScenePeter.unity
     guid: 96391f5e36f80d247ae34f91527e11ae

@@ -14,7 +14,7 @@ public class MusicControl : MonoBehaviour {
     // Use this for initialization
    void Start ()
     {
-
+        
         ZombieNumber = GameObject.FindGameObjectsWithTag("zombie").Length;
 
     }
